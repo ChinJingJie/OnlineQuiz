@@ -2,6 +2,8 @@
 
 Welcome to the **Online Quiz Application**, a full-stack web application designed to provide an interactive platform for users to take quizzes, test their knowledge, and track their progress. Built using **Java Spring Boot** for the backend and **ReactJS** for the frontend, this project showcases my skills in full-stack development and modern web technologies.
 
+A wireframe is attach as reference: [Figma Design File](https://embed.figma.com/design/yyjB2RHUroWJeaVck2kiDY/Online-Quiz-App?node-id=0-1&embed-host=share)
+
 ## Features
 
 - **User Authentication**: Secure login and registration for users.
