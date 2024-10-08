@@ -1,29 +1,29 @@
-import React from 'react';
-import { Box, Typography } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+
+import AppBar from './components/AppBar';
+import Footer from './components/Footer';
 
 function App() {
-  const theme = useTheme();
+  const [brandName, setBrandName] = useState('QuizCraze');
+  const [menuItems, setMenuItems] = useState(["Home","Leaderboard","Logout"]);
+  const [loginText, setlLoginText] = useState('Login');
 
   return (
-    <Box
-      sx={{
-        backgroundColor: theme.palette.background.default, // Set background color from the theme
-        minHeight: '100vh', // Full height of the viewport
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: theme.spacing(2), // Padding from the theme
-      }}
-    >
-      <Typography variant="h1" color="primary">
-        QuizCraze
-      </Typography>
-      <Typography variant="body1" color="secondary">
-        Have a Quiz, Win the Craze!
-      </Typography>
-    </Box>
+    <Router>
+      <div>
+        <AppBar 
+          brand={brandName}
+          menu={menuItems}
+          login={loginText}
+        />
+        <Routes>
+          <Route path="/" element={<Home setBrandName={setBrandName} setMenuItems={setMenuItems} setlLoginText={setlLoginText}/>} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

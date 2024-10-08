@@ -22,10 +22,19 @@ const theme = createTheme({
   typography: {
     fontFamily: 'Roboto, Arial, sans-serif',
     h1: {
-        fontWeight: 700,
+        fontWeight: 'bold',
+    },
+    h5: {
+        fontWeight: 'bold',
+    },
+    h6: {
+        fontWeight: 'medium',
+    },
+    subtitle1: {
+        fontWeight: 'medium',
     },
     body1: {
-        fontWeight: 400,
+        fontWeight: 'regular',
     },
   },
 });
